@@ -10,6 +10,9 @@
             placeholder="Enter Your Name"
             v-model="name"
           />
+          <span class="error-feedback" v-if="v$.name.$error">{{
+            v$.name.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row m-3 align-items-center">
@@ -20,6 +23,9 @@
             placeholder="Enter Your Email"
             v-model="email"
           />
+          <span class="error-feedback" v-if="v$.email.$error">{{
+            v$.email.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row m-3 align-items-center">
@@ -30,11 +36,16 @@
             placeholder="Enter Your Password"
             v-model="pass"
           />
+          <span class="error-feedback" v-if="v$.pass.$error">{{
+            v$.pass.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row m-3 align-items-center">
         <div class="col-auto d-block mx-auto">
-          <button type="submit" class="btn btn-primary">Sing Up Now</button>
+          <button type="submit" @click="singUpNow()" class="btn btn-primary">
+            Sing Up Now
+          </button>
           &nbsp;&nbsp;&nbsp;
           <button type="button" class="btn btn-primary" @click="LoginPage()">
             Log In
@@ -46,13 +57,26 @@
 </template>
 
 <script>
+// validate
+import { useVuelidate } from "@vuelidate/core";
+import { required, email, minLength } from "@vuelidate/validators";
+
 export default {
   name: "SingupContent",
   data() {
     return {
+      v$: useVuelidate(),
       name: "",
       pass: "",
       email: "",
+    };
+  },
+
+  validations() {
+    return {
+      name: { required },
+      pass: { required, minLength: minLength(8) },
+      email: { required, email },
     };
   },
 
@@ -60,6 +84,20 @@ export default {
     LoginPage() {
       this.$router.push({ name: "LoginPage" });
     },
+    singUpNow() {
+      this.v$.$validate();
+      // if (!this.v$.$error) {
+      //   console.log("Form Validated Successfully");
+      // } else {
+      //   console.log("Form Validation Faild");
+      // }
+    },
   },
 };
 </script>
+<style scoped lang="scss">
+.error-feedback {
+  color: red;
+  font-size: 0.85em;
+}
+</style>

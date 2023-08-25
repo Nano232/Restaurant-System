@@ -8,8 +8,11 @@
             type="emal"
             class="form-control"
             placeholder="Enter Your Email"
-            v-model="email"
+            v-model="state.email"
           />
+          <span class="error-feedback" v-if="v$.email.$error">{{
+            v$.email.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row m-3 align-items-center">
@@ -18,13 +21,18 @@
             type="password"
             class="form-control"
             placeholder="Enter Your Password"
-            v-model="pass"
+            v-model="state.pass"
           />
+          <span class="error-feedback" v-if="v$.pass.$error">{{
+            v$.pass.$errors[0].$message
+          }}</span>
         </div>
       </div>
       <div class="row m-3 align-items-center">
         <div class="col-auto d-block mx-auto">
-          <button type="submit" class="btn btn-primary">Log In</button>
+          <button type="submit" @click="logInNow()" class="btn btn-primary">
+            Log In
+          </button>
           &nbsp;&nbsp;&nbsp;
           <button type="button" class="btn btn-primary" @click="SingupPage()">
             Sing Up
@@ -36,19 +44,55 @@
 </template>
 
 <script>
+// validate
+import { useVuelidate } from "@vuelidate/core";
+import { required, email, minLength } from "@vuelidate/validators";
+import { reactive, computed } from "vue";
 export default {
   name: "LoginContent",
-  data() {
-    return {
+  // compositionApi
+  setup() {
+    // data
+    const state = reactive({
       pass: "",
       email: "",
+    });
+    // Validations
+    const rules = computed(() => {
+      return {
+        pass: { required, minLength: minLength(8) },
+        email: { required, email },
+      };
+    });
+    // use ValdateData
+    const v$ = useVuelidate(rules, state);
+    return {
+      state,
+      v$,
     };
+  },
+  data() {
+    return {};
   },
 
   methods: {
     SingupPage() {
       this.$router.push({ name: "SingupPage" });
     },
+    logInNow() {
+      this.v$.$validate();
+      // if (!this.v$.$error) {
+      //   console.log("Form Validated Successfully");
+      // } else {
+      //   console.log("Form Validation Faild");
+      // }
+    },
   },
 };
 </script>
+<style scoped lang="scss">
+.error-feedback {
+  color: red;
+  font-size: 0.85em;
+}
+</style>
