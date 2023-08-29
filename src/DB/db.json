@@ -1,34 +1,10 @@
 {
   "users": [
     {
-      "name": "Mhamed",
-      "email": "elzorany.mohamed232@gmail.com",
-      "pass": "Mohamed232",
-      "id": 1
-    },
-    {
-      "name": "Mhamed22",
-      "email": "elzorany.m22ohamed232@gmail.com",
-      "pass": "222222222",
-      "id": 2
-    },
-    {
       "name": "Mohamed",
-      "email": "Mohamed@gmail.com",
+      "email": "elzorany.mohamed232@gmail.com",
       "pass": "Mohamed1352002",
-      "id": 3
-    },
-    {
-      "name": "asasf",
-      "email": "afaffa@gma.co",
-      "pass": "afasfafafsafa",
-      "id": 4
-    },
-    {
-      "name": "asfasfasfasf",
-      "email": "asasd@gag.co",
-      "pass": "asfasfnasf",
-      "id": 5
+      "id": 1
     }
   ]
 }
