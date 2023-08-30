@@ -39,6 +39,12 @@
           </button>
         </div>
       </div>
+      <br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto d-block mx-auto error-feedback">
+          {{ userNotFoundErr }}
+        </div>
+      </div>
     </div>
   </form>
 </template>
@@ -47,6 +53,7 @@
 // validate
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
+import axios from "axios";
 import { reactive, computed } from "vue";
 export default {
   name: "LoginContent",
@@ -72,20 +79,33 @@ export default {
     };
   },
   data() {
-    return {};
+    return {
+      userNotFoundErr: "",
+    };
   },
 
   methods: {
     SingupPage() {
       this.$router.push({ name: "SingupPage" });
     },
-    logInNow() {
+    async logInNow() {
       this.v$.$validate();
-      // if (!this.v$.$error) {
-      //   console.log("Form Validated Successfully");
-      // } else {
-      //   console.log("Form Validation Faild");
-      // }
+      if (!this.v$.$error) {
+        console.log("Form Validated Successfully");
+        let result = await axios.get(
+          `http://localhost:3000/users?email=${this.state.email}&pass=${this.state.pass}`
+        );
+        if (result.status == 200 && result.data.length > 0) {
+          // this.userNotFoundErr = "User Found";
+          localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+          this.$router.push({ name: "SingupPage" });
+        } else {
+          this.userNotFoundErr = "User Not Found";
+        }
+        // console.log(result);
+      } else {
+        console.log("Form Validation Faild");
+      }
     },
   },
 };

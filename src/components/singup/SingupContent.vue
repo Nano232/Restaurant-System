@@ -60,7 +60,7 @@
 // validate
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
-
+import axios from "axios";
 export default {
   name: "SingupContent",
   data() {
@@ -79,18 +79,40 @@ export default {
       email: { required, email },
     };
   },
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "home" });
+    }
+  },
 
   methods: {
     LoginPage() {
       this.$router.push({ name: "LoginPage" });
     },
-    singUpNow() {
+    async singUpNow() {
       this.v$.$validate();
-      // if (!this.v$.$error) {
-      //   console.log("Form Validated Successfully");
-      // } else {
-      //   console.log("Form Validation Faild");
-      // }
+      if (!this.v$.$error) {
+        console.log("Form Validated Successfully");
+        let result = await axios.post("http://localhost:3000/users", {
+          name: this.name,
+          email: this.email,
+          pass: this.pass,
+        });
+        if (result.status == 201) {
+          console.log("Added A New User Successfully");
+
+          // save user data in localstorage
+          localStorage.setItem("user-info", JSON.stringify(result.data));
+          console.log(result.data);
+          // redirect home page
+          this.$router.push({ name: "home" });
+        } else {
+          console.log("Error on Adding New USer");
+        }
+      } else {
+        console.log("Form Validation Faild");
+      }
     },
   },
 };
