@@ -2,7 +2,7 @@
   <form @click.prevent>
     <div class="container-fluid">
       <div class="row m-3 align-items-center">
-        <h1>SIng Up</h1>
+        <h1 class="text-center">SIng Up</h1>
         <div class="col-auto d-block mx-auto">
           <input
             type="text"
