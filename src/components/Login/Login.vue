@@ -35,6 +35,11 @@
           </button>
         </div>
       </div>
+      <div class="row align-items-center text-center" style="margin: 0 auto">
+        <div class="col-12">
+          <span>{{ userNotFound }}</span>
+        </div>
+      </div>
     </form>
   </div>
 </template>
@@ -42,6 +47,8 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
+const sweetalert = require("sweetalert");
+import axios from "axios";
 export default {
   name: "LogInForm",
   data() {
@@ -49,6 +56,7 @@ export default {
       v$: useVuelidate(),
       pass: "",
       email: "",
+      userNotFound: "",
     };
   },
   validations() {
@@ -67,8 +75,21 @@ export default {
     signupPage() {
       this.$router.push({ name: "SignupPage" });
     },
-    LoginNow() {
+    async LoginNow() {
       this.v$.$validate();
+      let result = await axios.get(
+        `http://localhost:3000/users?email=${this.email}&pass=${this.pass}`
+      );
+      if (result.status == 200 && result.data.length > 0) {
+        localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+        this.$router.push({ name: "home" });
+      } else {
+        sweetalert({
+          title: "User Not Found",
+          icon: "error",
+        });
+      }
+      console.log(result);
     },
   },
 };
@@ -77,7 +98,7 @@ export default {
 <style lang="scss" scoped>
 .container .row {
   width: 60%;
-  margin: 50px auto;
+  margin: 50px auto 0;
   span {
     color: red;
     font-size: 0.85em;
