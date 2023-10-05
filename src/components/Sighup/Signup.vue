@@ -51,8 +51,10 @@
 </template>
 
 <script>
+const sweetalert = require("sweetalert");
 import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
+import axios from "axios";
 export default {
   name: "SignUpFoem",
   data() {
@@ -70,12 +72,43 @@ export default {
       email: { required, email },
     };
   },
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "home" });
+    }
+  },
   methods: {
     loginPage() {
       this.$router.push({ name: "LogInPage" });
     },
-    singupNow() {
+    async singupNow() {
       this.v$.$validate();
+      if (!this.v$.$error) {
+        let result = await axios.post("http://localhost:3000/users", {
+          name: this.name,
+          pass: this.pass,
+          email: this.email,
+        });
+        if (result.status == 201) {
+          sweetalert({
+            title: "Form Added Successfully",
+            icon: "success",
+          });
+          (this.name = ""), (this.pass = ""), (this.email = "");
+          // save user data in local storage
+          localStorage.setItem("user-info", JSON.stringify(result.data));
+          // to home page
+          this.$router.push({ name: "home" });
+        } else {
+          sweetalert({
+            title: "Form Added Failed",
+            icon: "error",
+          });
+        }
+      } else {
+        console.log("Form Validation Failed");
+      }
     },
   },
 };
