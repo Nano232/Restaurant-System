@@ -57,6 +57,12 @@ export default {
       email: { required, email },
     };
   },
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "home" });
+    }
+  },
   methods: {
     signupPage() {
       this.$router.push({ name: "SignupPage" });
