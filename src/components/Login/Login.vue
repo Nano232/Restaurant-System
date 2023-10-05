@@ -2,15 +2,7 @@
   <div class="container">
     <form action="">
       <div class="row align-items-center" style="">
-        <h1>Sign Up</h1>
-        <div class="col-12 m-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter Your Name"
-            v-model="name"
-          />
-        </div>
+        <h1>Log In</h1>
         <div class="col-12 m-3">
           <input
             type="email"
@@ -28,10 +20,10 @@
           />
         </div>
         <div class="col-12 m-3">
-          <button type="submit" class="btn btn-primary">SignUp Now</button>
+          <button type="submit" class="btn btn-primary">LogIn Now</button>
           &nbsp;&nbsp;&nbsp;
-          <button type="button" class="btn btn-primary" @click="loginPage()">
-            Login
+          <button type="button" class="btn btn-primary" @click="signupPage()">
+            SignUp
           </button>
         </div>
       </div>
@@ -41,17 +33,16 @@
 
 <script>
 export default {
-  name: "SignUpFoem",
+  name: "LogInForm",
   data() {
     return {
-      name: "",
       pass: "",
       email: "",
     };
   },
   methods: {
-    loginPage() {
-      this.$router.push({ name: "LogInPage" });
+    signupPage() {
+      this.$router.push({ name: "SignupPage" });
     },
   },
 };
