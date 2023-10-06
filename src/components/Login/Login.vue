@@ -35,11 +35,6 @@
           </button>
         </div>
       </div>
-      <div class="row align-items-center text-center" style="margin: 0 auto">
-        <div class="col-12">
-          <span>{{ userNotFound }}</span>
-        </div>
-      </div>
     </form>
   </div>
 </template>
@@ -56,7 +51,6 @@ export default {
       v$: useVuelidate(),
       pass: "",
       email: "",
-      userNotFound: "",
     };
   },
   validations() {
