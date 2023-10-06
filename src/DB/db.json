@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "Mohamed",
+      "name": "Mohamed Elzorkany",
+      "email": "Mohamed@gmail.com",
       "pass": "mohamed23201823",
-      "email": "elzprany.mohamed232@gmail.com",
       "id": 1
     },
     {
@@ -13,9 +13,9 @@
       "id": 2
     },
     {
-      "name": "Ahmed",
-      "pass": "ahmed23201823",
+      "name": "Elzorkany",
       "email": "Ahmed@gmail.com",
+      "pass": "ahmed23201823",
       "id": 3
     }
   ]
