@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import SignupVue from "@/components/Sighup/Signup.vue";
 import LoninVue from "@/components/Login/Login.vue";
 import Profile from "@/views/Profile.vue";
+import ErrorPage from "@/views/ErrorPage.vue";
 import UpdateProfile from "@/components/profile/UpdateProfile.vue";
 const routes = [
   {
@@ -29,6 +30,11 @@ const routes = [
     path: "/updateprofile",
     name: "UpdateProfile",
     component: UpdateProfile,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "ErroePage",
+    component: ErrorPage,
   },
 ];
 
