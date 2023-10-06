@@ -89,6 +89,8 @@ export default {
       this.email = JSON.parse(user).email;
       this.pass = JSON.parse(user).pass;
       this.userId = JSON.parse(user).id;
+    } else {
+      this.$router.push({ name: "home" });
     }
   },
   methods: {
