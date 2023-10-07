@@ -29,6 +29,12 @@
       "pass": "mohamedmohamed",
       "email": "mohamed@mail.com",
       "id": 5
+    },
+    {
+      "name": "ali",
+      "pass": "ali23201823",
+      "email": "ali@gmail.com",
+      "id": 6
     }
   ]
 }

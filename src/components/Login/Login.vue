@@ -72,7 +72,7 @@ export default {
     async LoginNow() {
       this.v$.$validate();
       let result = await axios.get(
-        `http://localhost:3000/users?email=${this.email}&pass=${this.pass}`
+        `https://json-server-api-one.vercel.app/users?email=${this.email}&pass=${this.pass}`
       );
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user-info", JSON.stringify(result.data[0]));

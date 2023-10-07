@@ -86,7 +86,7 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         let result = await axios.post(
-          "http://localhost:3000/users",
+          "https://json-server-api-one.vercel.app/users",
           {
             name: this.name,
             pass: this.pass,
