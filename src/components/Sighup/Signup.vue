@@ -85,7 +85,7 @@ export default {
     async singupNow() {
       this.v$.$validate();
       if (!this.v$.$error) {
-        let result = await axios.post("https://json-server-api-one.vercel.app/users", {
+        let result = await axios.post("http://localhost:3000/users", {
           name: this.name,
           pass: this.pass,
           email: this.email,
