@@ -99,7 +99,7 @@ export default {
       if (!this.v$.$error) {
         console.log("Valiated");
         let result = await axios.put(
-          `https://json-server-api-one.vercel.app/users/${this.userId}`,
+          `http://localhost:3000/users/${this.userId}`,
           {
             name: this.name,
             email: this.email,
