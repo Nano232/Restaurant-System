@@ -7,10 +7,12 @@
         <button class="btn btn-info" type="button">Profile</button>
       </router-link>
     </p>
+    <AddNewLocation />
   </div>
 </template>
 <script>
 import Navbar from "@/components/header/Navbar.vue";
+import AddNewLocation from "@/components/Location/AddNewLocation.vue";
 export default {
   name: "HomePage",
   data() {
@@ -20,6 +22,7 @@ export default {
   },
   components: {
     Navbar,
+    AddNewLocation,
   },
 
   mounted() {

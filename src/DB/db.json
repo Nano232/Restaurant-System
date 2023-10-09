@@ -1,3 +1,11 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Omina",
+      "email": "Omnia@gmail.com",
+      "pass": "omnia23201823",
+      "id": 1
+    }
+  ],
+  "locations": []
 }
