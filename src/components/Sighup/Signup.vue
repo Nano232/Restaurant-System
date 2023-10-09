@@ -91,6 +91,7 @@ export default {
           email: this.email,
         });
         if (result.status == 201) {
+          // 201 => success
           sweetalert({
             title: "Form Added Successfully",
             icon: "success",

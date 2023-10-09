@@ -1,11 +1,47 @@
 {
   "users": [
     {
-      "name": "Omina",
-      "email": "Omnia@gmail.com",
-      "pass": "omnia23201823",
+      "name": "Mohamed",
+      "pass": "mohamed23201823",
+      "email": "elzorany.mohamed232@gmail.com",
       "id": 1
     }
   ],
-  "locations": []
+  "locations": [
+    {
+      "name": "Mohamed Restaurant",
+      "address": "Mohamed Ayman Elzorkany",
+      "phone": 1030569419,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "Mohamed Restaurant",
+      "address": "Mohamed Ayman Elzorkany",
+      "phone": 1030569419,
+      "userId": "",
+      "id": 2
+    },
+    {
+      "name": "dadadadadad",
+      "address": "adadadadadasdadad",
+      "phone": 121313131313,
+      "userId": "",
+      "id": 3
+    },
+    {
+      "name": "adasdasdasdasd",
+      "address": "adasdadadasdasdasd",
+      "phone": 12313123123123,
+      "userId": "",
+      "id": 4
+    },
+    {
+      "name": "dasdadadadad",
+      "address": "adadadadasdasdadasdadadasdadasd",
+      "phone": 313131313131313,
+      "userId": "",
+      "id": 5
+    }
+  ]
 }
