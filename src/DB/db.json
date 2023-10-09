@@ -3,45 +3,79 @@
     {
       "name": "Mohamed",
       "pass": "mohamed23201823",
-      "email": "elzorany.mohamed232@gmail.com",
+      "email": "elzorany.mhamed232@gmail.com",
       "id": 1
+    },
+    {
+      "name": "MOHAMED ELZORKANY Aymna",
+      "email": "ELZORKANY.MOHAMED232@GMAIL.COM",
+      "pass": "MOHAMED23201823",
+      "id": 2
     }
   ],
   "locations": [
     {
-      "name": "Mohamed Restaurant",
-      "address": "Mohamed Ayman Elzorkany",
+      "name": "Mohamed's Restaurant",
+      "address": "Mnofia - Shbeen Al-Koom",
       "phone": 1030569419,
       "userId": 1,
       "id": 1
     },
     {
-      "name": "Mohamed Restaurant",
-      "address": "Mohamed Ayman Elzorkany",
+      "name": "MOHAMED'S RESTAURANT",
+      "address": "MNOFIA SHBIN AL-KOOM",
       "phone": 1030569419,
-      "userId": "",
+      "userId": 2,
       "id": 2
     },
     {
-      "name": "dadadadadad",
-      "address": "adadadadadasdadad",
-      "phone": 121313131313,
-      "userId": "",
+      "name": "ajfjsfhajkfnskjfh",
+      "address": "akfnakjfnakjnakjfkajfaf",
+      "phone": 239424203942,
+      "userId": 1,
       "id": 3
     },
     {
-      "name": "adasdasdasdasd",
-      "address": "adasdadadasdasdasd",
-      "phone": 12313123123123,
-      "userId": "",
+      "name": "mohamedayman",
+      "address": "mohamedayanelzorkany",
+      "phone": 1030569419,
+      "userId": 1,
       "id": 4
     },
     {
-      "name": "dasdadadadad",
-      "address": "adadadadasdasdadasdadadasdadasd",
-      "phone": 313131313131313,
-      "userId": "",
+      "name": "Mohamedasfsidajk",
+      "address": "akjfbkjafbgjafkjaf",
+      "phone": 1213131983981639,
+      "userId": 2,
       "id": 5
+    },
+    {
+      "name": "asfafafasf",
+      "address": "ffgsfafagaf33242",
+      "phone": 12313123123123,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "Mohamed Aymna",
+      "address": "Mohamed Aymna Elzorkany",
+      "phone": 1030569419,
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "Mohamed ayman",
+      "address": "mohamed' fish & meet",
+      "phone": 1098714694,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "asdasdasdasd",
+      "address": "aadasdadasdaasdasd",
+      "phone": 13213123123,
+      "userId": 2,
+      "id": 9
     }
   ]
 }

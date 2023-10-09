@@ -113,9 +113,10 @@ export default {
     };
   },
   mounted() {
-    let user = localStorage.getItem("user-info");
-    if (!user) {
+    if (!localStorage.getItem("user-info")) {
       this.$router.push({ name: "SignupPage" });
+    } else {
+      this.userId = JSON.parse(localStorage.getItem("user-info")).id;
     }
   },
   methods: {
@@ -133,11 +134,18 @@ export default {
         if (resault.status == 201) {
           // 201 => success
           sweetalert({
-            title: "Restaurant Added Successfully",
+            title: "Restaurant Added Location Successfully",
             icon: "success",
           });
           this.$router.push({ name: "home" });
-          localStorage.setItem("user-info", JSON.stringify(resault.data)[0]);
+          setTimeout(() => {
+            (this.name = ""),
+              (this.address = ""),
+              (this.phone = ""),
+              (this.v$.name.$errors[0].$message = ""),
+              (this.v$.address.$errors[0].$message = ""),
+              (this.v$.phone.$errors[0].$message = "");
+          }, 2000);
         } else {
           sweetalert({
             title: "Restaurant Added Faild",
@@ -145,7 +153,10 @@ export default {
           });
         }
       } else {
-        console.log("Not Validated");
+        sweetalert({
+          title: "Inputs Not Validated",
+          icon: "error",
+        });
       }
     },
   },
