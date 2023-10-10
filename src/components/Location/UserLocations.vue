@@ -1,8 +1,8 @@
 <template>
-  <div class="parent mt-3">
+  <div class="parent mt-3" style="text-align: left">
     <table class="table caption-top" v-if="allLocations.length > 0">
-      <caption>
-        List Of Locations
+      <caption style="font-weight: bold">
+        List Of Locations:
         {{
           allLocations.length
         }}

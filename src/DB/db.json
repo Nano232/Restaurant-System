@@ -2,107 +2,51 @@
   "users": [
     {
       "name": "Mohamed Ayman Elzorkany",
-      "email": "elzorany.mhamed232@gmail.com",
+      "email": "elzorany.mohamed232@gmail.com",
       "pass": "mohamed23201823",
       "id": 1
     },
     {
-      "name": "MOHAMED ELZORKANY Aymna",
-      "email": "ELZORKANY.MOHAMED232@GMAIL.COM",
-      "pass": "MOHAMED23201823",
+      "name": "Momen Ayman Elzorkany",
+      "pass": "momen23201823",
+      "email": "elzorany.momen232@gmail.com",
       "id": 2
     },
     {
-      "name": "Ahmed Mohamed",
-      "email": "ahmed_mohamed@gmail.com",
-      "pass": "ahmedmohamed23201823",
+      "name": "Malak Ayman Elzorkany",
+      "pass": "malak23201823",
+      "email": "elzorany.malak232@gmail.com",
       "id": 3
     }
   ],
   "locations": [
     {
       "name": "Mohamed's Restaurant",
-      "address": "Mnofia - Shbeen Al-Koom",
-      "phone": 1030569419,
+      "address": "Shbeen Al-Koom El-mnofia",
+      "phone": "+201030569419",
       "userId": 1,
       "id": 1
     },
     {
-      "name": "MOHAMED'S RESTAURANT",
-      "address": "MNOFIA SHBIN AL-KOOM",
-      "phone": 1030569419,
+      "name": "Momen's Restaurant",
+      "address": "Al-Batanon Shbeen Al-Koom",
+      "phone": "+201000408612",
       "userId": 2,
       "id": 2
     },
     {
-      "name": "ajfjsfhajkfnskjfh",
-      "address": "akfnakjfnakjnakjfkajfaf",
-      "phone": 239424203942,
-      "userId": 1,
+      "name": "Malak's Restaurant",
+      "address": "New-Cairo Egypt ",
+      "phone": "+201094191994",
+      "userId": 3,
       "id": 3
     },
     {
-      "name": "mohamedayman",
-      "address": "mohamedayanelzorkany",
-      "phone": 1030569419,
+      "name": "Mohamed's Restaurant",
+      "address": "USA, California",
+      "phone": "+201030569419",
       "userId": 1,
       "id": 4
-    },
-    {
-      "name": "Mohamedasfsidajk",
-      "address": "akjfbkjafbgjafkjaf",
-      "phone": 1213131983981639,
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "name": "asfafafasf",
-      "address": "ffgsfafagaf33242",
-      "phone": 12313123123123,
-      "userId": 2,
-      "id": 6
-    },
-    {
-      "name": "Mohamed Aymna",
-      "address": "Mohamed Aymna Elzorkany",
-      "phone": 1030569419,
-      "userId": 2,
-      "id": 7
-    },
-    {
-      "name": "Mohamed ayman",
-      "address": "mohamed' fish & meet",
-      "phone": 1098714694,
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "name": "asdasdasdasd",
-      "address": "aadasdadasdaasdasd",
-      "phone": 13213123123,
-      "userId": 2,
-      "id": 9
-    },
-    {
-      "name": "Mohamed's Restaurant",
-      "address": "Mohamed Aymna ELzorkany",
-      "phone": 1030569419,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "name": "Mohamed's Reastrant",
-      "address": "Moamed Aymna Elzorkany",
-      "phone": 1030569419,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "name": "Ahmed's Restaurant",
-      "address": "Ahmed mohamed mnofia",
-      "phone": 1098714694,
-      "userId": 3,
-      "id": 12
     }
   ]
 }

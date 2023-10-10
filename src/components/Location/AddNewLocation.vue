@@ -46,7 +46,7 @@
               </div>
               <div class="col-12 my-3">
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   placeholder="Phone Number"
                   v-model="phone"
@@ -138,6 +138,7 @@ export default {
             icon: "success",
           });
           this.$router.push({ name: "home" });
+          window.location.reload();
           setTimeout(() => {
             (this.name = ""),
               (this.address = ""),
