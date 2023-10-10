@@ -132,7 +132,7 @@ export default {
         });
         console.log(resault);
         if (resault.status == 201) {
-          // 201 => success
+          // 201 => success whenuse POST
           sweetalert({
             title: "Restaurant Added Location Successfully",
             icon: "success",

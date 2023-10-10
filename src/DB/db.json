@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "Mohamed",
-      "pass": "mohamed23201823",
+      "name": "Mohamed Ayman Elzorkany",
       "email": "elzorany.mhamed232@gmail.com",
+      "pass": "mohamed23201823",
       "id": 1
     },
     {
@@ -11,6 +11,12 @@
       "email": "ELZORKANY.MOHAMED232@GMAIL.COM",
       "pass": "MOHAMED23201823",
       "id": 2
+    },
+    {
+      "name": "Ahmed Mohamed",
+      "email": "ahmed_mohamed@gmail.com",
+      "pass": "ahmedmohamed23201823",
+      "id": 3
     }
   ],
   "locations": [
@@ -76,6 +82,27 @@
       "phone": 13213123123,
       "userId": 2,
       "id": 9
+    },
+    {
+      "name": "Mohamed's Restaurant",
+      "address": "Mohamed Aymna ELzorkany",
+      "phone": 1030569419,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "Mohamed's Reastrant",
+      "address": "Moamed Aymna Elzorkany",
+      "phone": 1030569419,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Ahmed's Restaurant",
+      "address": "Ahmed mohamed mnofia",
+      "phone": 1098714694,
+      "userId": 3,
+      "id": 12
     }
   ]
 }
