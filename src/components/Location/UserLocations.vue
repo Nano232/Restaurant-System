@@ -20,7 +20,16 @@
           <td>{{ loc.name }}</td>
           <td>{{ loc.phone }}</td>
           <td>{{ loc.address }}</td>
-          <td>Delete | Update | View</td>
+          <td>
+            <router-link
+              :to="{ name: 'DeleteLocation', params: { locationId: loc.id } }"
+            >
+              <button class="btn btn-danger">Delete</button>
+            </router-link>
+            <!-- <button class="btn btn-danger" @click="DeleteLocationPage()">
+              Delete
+            </button> -->
+          </td>
         </tr>
       </tbody>
     </table>
@@ -33,6 +42,11 @@
 export default {
   name: "UserLocations",
   props: ["allLocations"],
+  methods: {
+    DeleteLocationPage() {
+      this.$router.push({ name: "DeleteLocation" });
+    },
+  },
 };
 </script>
 <style lang="scss" scoped></style>
