@@ -1,14 +1,14 @@
 <template>
   <div class="delete-location">
-    <DeleteLocationComponent />
+    <DeleteLocation />
   </div>
 </template>
 <script>
-import DeleteLocationComponent from "@/components/Location/DeleteLocationComponent.vue";
+import DeleteLocation from "@/components/Location/DeleteLocation.vue";
 export default {
   name: "DeleteLocationPage",
   components: {
-    DeleteLocationComponent,
+    DeleteLocation,
   },
 };
 </script>

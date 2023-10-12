@@ -21,13 +21,6 @@
   ],
   "locations": [
     {
-      "name": "Mohamed's Restaurant",
-      "address": "Shbeen Al-Koom El-mnofia",
-      "phone": "+201030569419",
-      "userId": 1,
-      "id": 1
-    },
-    {
       "name": "Momen's Restaurant",
       "address": "Al-Batanon Shbeen Al-Koom",
       "phone": "+201000408612",
@@ -43,7 +36,7 @@
     },
     {
       "name": "Mohamed's Restaurant",
-      "address": "USA, California",
+      "address": "Skbeen Al-Koom Mnofia Egypt",
       "phone": "+201030569419",
       "userId": 1,
       "id": 4

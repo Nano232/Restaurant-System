@@ -26,9 +26,6 @@
             >
               <button class="btn btn-danger">Delete</button>
             </router-link>
-            <!-- <button class="btn btn-danger" @click="DeleteLocationPage()">
-              Delete
-            </button> -->
           </td>
         </tr>
       </tbody>
