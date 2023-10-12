@@ -24,7 +24,7 @@
 </template>
 <script>
 import Navbar from "@/components/header/Navbar.vue";
-import axios, { all } from "axios";
+import axios from "axios";
 const sweetalert = require("sweetalert");
 export default {
   name: "DeleteAllLocationsComponent",
