@@ -2,10 +2,12 @@
   <div class="parent mt-3" style="text-align: left">
     <table class="table caption-top" v-if="allLocations.length > 0">
       <caption style="font-weight: bold">
-        List Of Locations:
-        {{
-          allLocations.length
-        }}
+        <span> List Of Locations: {{ allLocations.length }}</span>
+        <span class="float-end">
+          <router-link :to="{ name: 'DeleteAllLocations' }">
+            <button class="btn btn-danger">Delete All</button>
+          </router-link>
+        </span>
       </caption>
       <thead>
         <tr>

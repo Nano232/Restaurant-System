@@ -5,6 +5,7 @@ import LoninVue from "@/components/Login/Login.vue";
 import Profile from "@/views/Profile.vue";
 import UpdateProfile from "@/components/profile/UpdateProfile.vue";
 import DeleteLocation from "@/views/DeleteLocation.vue";
+import DeleteAllLocations from "@/views/DeleteAllLocations.vue";
 import ErrorPage from "@/views/ErrorPage.vue";
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: "/deleteLocation/:locationId",
     name: "DeleteLocation",
     component: DeleteLocation,
+  },
+  {
+    path: "/deleteAllLocations",
+    name: "DeleteAllLocations",
+    component: DeleteAllLocations,
   },
   {
     path: "/:catchAll(.*)",

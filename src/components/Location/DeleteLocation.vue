@@ -87,7 +87,7 @@ export default {
         }, 2000);
       } else {
         sweetalert({
-          title: "Delete Restaurant Fild",
+          title: "Delete Restaurant Failed",
           icon: "error",
         });
       }
