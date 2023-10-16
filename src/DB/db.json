@@ -1,38 +1,32 @@
 {
   "users": [
     {
-      "name": "Mohamed Ayman Elzorkany",
+      "name": "dasasdasdasd",
+      "pass": "asdsdasdadada",
       "email": "elzorany.mohamed232@gmail.com",
-      "pass": "mohamed23201823",
       "id": 1
     },
     {
-      "name": "Momen Ayman Elzorkany",
-      "pass": "momen23201823",
-      "email": "elzorany.momen232@gmail.com",
+      "name": "Mohamed Ayman",
+      "email": "Mohamed@gmail.com",
+      "pass": "mohamedaymah",
       "id": 2
-    },
-    {
-      "name": "Malak Ayman Elzorkany",
-      "pass": "malak23201823",
-      "email": "elzorany.malak232@gmail.com",
-      "id": 3
     }
   ],
   "locations": [
     {
-      "name": "Momen's Restaurant",
-      "address": "Al-Batanon Shbeen Al-Koom",
-      "phone": "+201000408612",
-      "userId": 2,
-      "id": 2
+      "name": "Mohamed Aymna ",
+      "address": "Mohamed Aymna Elzorkany",
+      "phone": "+201030569419",
+      "userId": 1,
+      "id": 1
     },
     {
-      "name": "Malak's Restaurant",
-      "address": "New-Cairo Egypt ",
-      "phone": "+201094191994",
-      "userId": 3,
-      "id": 3
+      "name": "Mohamed's Restaurant",
+      "address": "Mohamed Ayman ELzorkany",
+      "phone": "+201030569419",
+      "userId": 2,
+      "id": 2
     }
   ]
 }

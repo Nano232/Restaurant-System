@@ -32,7 +32,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form @click="prevent">
+            <form @click.prevent>
               <div class="col-12 my-3">
                 <input
                   type="text"

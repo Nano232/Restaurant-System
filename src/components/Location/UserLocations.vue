@@ -28,6 +28,12 @@
             >
               <button class="btn btn-danger">Delete</button>
             </router-link>
+            &nbsp; &nbsp;
+            <router-link
+              :to="{ name: 'UpdateLocation', params: { locationId: loc.id } }"
+            >
+              <button class="btn btn-info">Update</button>
+            </router-link>
           </td>
         </tr>
       </tbody>
