@@ -34,6 +34,10 @@
             >
               <button class="btn btn-info">Update</button>
             </router-link>
+            &nbsp; &nbsp;
+            <router-link :to="{ name: 'UserMenu' }">
+              <button class="btn btn-success">Menu</button>
+            </router-link>
           </td>
         </tr>
       </tbody>

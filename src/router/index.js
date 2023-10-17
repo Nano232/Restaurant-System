@@ -7,6 +7,7 @@ import UpdateProfile from "@/components/profile/UpdateProfile.vue";
 import DeleteLocation from "@/views/DeleteLocation.vue";
 import DeleteAllLocations from "@/views/DeleteAllLocations.vue";
 import UpdateLocation from "@/views/UpdateLocation.vue";
+import UserMenu from "@/views/UserMenu.vue";
 import ErrorPage from "@/views/ErrorPage.vue";
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: "/updateLocation/:locationId",
     name: "UpdateLocation",
     component: UpdateLocation,
+  },
+  {
+    path: "/menu",
+    name: "UserMenu",
+    component: UserMenu,
   },
   {
     path: "/:catchAll(.*)",

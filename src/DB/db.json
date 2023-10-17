@@ -15,18 +15,20 @@
   ],
   "locations": [
     {
-      "name": "Mohamed Aymna ",
-      "address": "Mohamed Aymna Elzorkany",
-      "phone": "+201030569419",
+      "name": "asdasdasdasdaasdasd",
+      "address": "asdasdasdadasdadadasd",
+      "phone": "dasdasdasdasdasd",
       "userId": 1,
       "id": 1
     },
     {
-      "name": "Mohamed's Restaurant",
-      "address": "Mohamed Ayman ELzorkany",
-      "phone": "+201030569419",
-      "userId": 2,
+      "name": "adasdadadas",
+      "address": "sdasdadasdasdasd",
+      "phone": "dasdasdadada",
+      "userId": 1,
       "id": 2
     }
-  ]
+  ],
+  "categories": [],
+  "items": []
 }
